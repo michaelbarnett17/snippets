@@ -27,7 +27,7 @@
 		"description": "create function declaration"
 	},	
 
-	"Named Function": {
+	"Expression Function": {
 		"scope": "javascript,typescript",
 		"prefix": "fu",
 		"body": [
@@ -85,8 +85,6 @@
 			"        //FUNCTION BODY",
 			"    },",
 			"};"
-
-			
 		],
 		"description": "create objects"
 	}	
