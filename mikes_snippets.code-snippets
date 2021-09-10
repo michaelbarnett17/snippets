@@ -71,6 +71,28 @@
 		"description": "create event listener"
 	},
 
+	"Event Handler": {
+		"scope": "javascript,typescript",
+		"prefix": "eh",
+		"body": [
+			"const VARIALBE_NAME = document.querySelector(`CSS_SELECTOR`);",
+			" ",
+			"VARIALBE_NAME.EVENT_NAME =  function() {",
+			" ",
+			"};"
+		],
+		"description": "create event handler"
+	},
+
+	"Query Selector": {
+		"scope": "javascript,typescript",
+		"prefix": "qs",
+		"body": [
+			"const VARIALBE_NAME = document.querySelector(`CSS_SELECTOR`);"
+		],
+		"description": "create event handler"
+	},	
+
 	"Object": {
 		"scope": "javascript,typescript",
 		"prefix": "ob",
@@ -89,5 +111,7 @@
 		"description": "create objects"
 	}	
 }
+
+
 
 	
