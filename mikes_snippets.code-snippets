@@ -51,13 +51,24 @@
 
 	"For Loop": {
 		"scope": "javascript,typescript",
-		"prefix": "fo",
+		"prefix": "for",
 		"body": [
 			"for (let i = 0; i < ARRAY_HERE.length; i++) {",
 			"",
 			"}",
 		],
 		"description": "create for loop"
+	},
+
+	"For of Loop": {
+		"scope": "javascript,typescript",
+		"prefix": "foro",
+		"body": [
+			"for (const [i, ITEM_NAME] of OBJECT.entries()) {",
+			"",
+			"}",
+		],
+		"description": "create for of loop"
 	},
 
 	"Event Listener": {
@@ -109,7 +120,42 @@
 			"};"
 		],
 		"description": "create objects"
-	}	
+	},
+	
+
+	"map array": {
+		"scope": "javascript,typescript",
+		"prefix": "ma",
+		"body": [
+			"const NEW_ARRAY_NAME = OBJECT.map(function (ITEM_NAME) {",
+			"    return // ITEM_YOU_WANT_IN_NEW_ARRAY",
+			"});"
+		],
+		"description": "use map method on an array"
+	},
+
+	"filter array": {
+		"scope": "javascript,typescript",
+		"prefix": "fi",
+		"body": [
+			"const NEW_ARRAY_NAME = OBJECT.filter(function (ITEM_NAME) {",
+			"    return // FILTER CONDITION ON ITEM_NAME",
+			"});"
+		],
+		"description": "use filter method on an array"
+	},
+
+	"reduce array": {
+		"scope": "javascript,typescript",
+		"prefix": "re",
+		"body": [
+			"const REDUCED_VALUE_NAME = ARRAY_TO_REDUCE.reduce(function (accumulator, currentElement, currentIndex_OPTIONAL, array_OPTIONAL) {",
+			"    return accumulator + currentElement",
+			"}, INITIAL_VALUE);"
+		],
+		"description": "use reduce method on an array"
+	},	
+
 }
 
 
