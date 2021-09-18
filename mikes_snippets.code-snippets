@@ -243,7 +243,7 @@
 		"",
 		"const INSTANCE_NAME = new NAME_OF_CONSTRUCTOR_FUNCTION(`ARGUMENT_1`, `ARGUMENT_2`);"
 		],
-		"description": "construction function with instance"
+		"description": "construction function (creates a class) with instance"
 	},
 
 	"Create a Class": {
@@ -269,6 +269,25 @@
 		"description": "Create a Class"
 	},
 
+// Asynchronous JavaScript
+	"Create XMLHttpRequest": {
+		"prefix": "XML",
+		"body": [
+		"const REQUEST_URL_NAME = `API_ENDPOINT`;",
+		"const REQUEST_NAME = new XMLHttpRequest();",
+		"",
+		"REQUEST_NAME.open(`GET_OR_POST`, REQUEST_URL_NAME);",
+		"REQUEST_NAME.send();",
+		"",
+		"REQUEST_NAME.addEventListener(`load`, function () {",
+		"    data = JSON.parse(this.responseText);",
+		"    console.log(data);",
+		"})",
+		""
+		],
+		"description": "Create XMLHttpRequest"
+	}
+	
 }
 
 	
