@@ -7,6 +7,7 @@
 	// Placeholders with the same ids are connected.
 	// Example:
 
+// LOGGING
 	"Print to console": {
 		"scope": "javascript,typescript",
 		"prefix": "cl",
@@ -16,6 +17,7 @@
 		"description": "Log output to console"
 	},
 
+// FUNCTIONS
 	"Regular Function": {
 		"scope": "javascript,typescript",
 		"prefix": "f",
@@ -27,7 +29,7 @@
 		"description": "create function declaration"
 	},	
 
-	"Expression Function": {
+	"Function Expression": {
 		"scope": "javascript,typescript",
 		"prefix": "fu",
 		"body": [
@@ -49,6 +51,7 @@
 		"description": "create arrow function"
 	},
 
+// LOOPS
 	"For Loop": {
 		"scope": "javascript,typescript",
 		"prefix": "for",
@@ -71,6 +74,7 @@
 		"description": "create for of loop"
 	},
 
+// EVENT LISTENER, HANDLER, DELEGATE
 	"Event Listener": {
 		"scope": "javascript,typescript",
 		"prefix": "el",
@@ -95,15 +99,82 @@
 		"description": "create event handler"
 	},
 
+	"Delegate an Event": {
+		"scope": "javascript,typescript",
+		"prefix": "delegate",
+		"body": [
+			"document.querySelector(`CSS_SELECTOR_FOR_COMMON_PARENT`).addEventListener(`click`, function (e) {",
+			"",
+			"    if (e.target.classList.contains(`NAME_OF_CLASS_DONT_USE_SELECTOR_PREFIX`)) {",
+				"    console.log(e.target);",
+			"    }",
+			"});"		
+		],
+		"description": "delegate an event"
+	},
+
+// DOM MANIPULATION
 	"Query Selector": {
 		"scope": "javascript,typescript",
 		"prefix": "qs",
 		"body": [
 			"const VARIALBE_NAME = document.querySelector(`CSS_SELECTOR`);"
 		],
-		"description": "create event handler"
-	},	
+		"description": "create query selector"
+	},
 
+	"Query Selector All": {
+		"scope": "javascript,typescript",
+		"prefix": "qsa",
+		"body": [
+			"const VARIALBE_NAME = document.querySelectorAll(`CSS_SELECTOR`);"
+		],
+		"description": "create query selector all"
+	},
+	
+	"Get Elements By Tag Name": {
+		"scope": "javascript,typescript",
+		"prefix": "tn",
+		"body": [
+			"//HTMLCollection will be updated automatically as page changes",
+			"const VARIALBE_NAME = document.getElementsByTagName(`TAG_NAME`);"
+		],
+		"description": "create get elements by tag name"
+	},
+	
+	"Get Elements By Class Name": {
+		"scope": "javascript,typescript",
+		"prefix": "cn",
+		"body": [
+			"//HTMLCollection will be updated automatically as page changes",
+			"const VARIALBE_NAME = document.getElementsByClassName(`CLASS_NAME`);"
+		],
+		"description": "create get elements by class name"
+	},
+	
+	"Insert Adjacent Element": {
+		"scope": "javascript,typescript",
+		"prefix": "ins",
+		"body": [
+			"//beforebegin, afterbegin, beforeend, afterend",
+			"document.querySelector(`CSS_SELECTOR`).insertAdjacentHTML(`POSITION`, `TEXT`);"
+		],
+		"description": "insert adjacent element"
+	},
+
+	"Delete Element": {
+		"scope": "javascript,typescript",
+		"prefix": "del",
+		"body": [
+			"document.querySelector(`THING_TO_CLICK`).",
+			"addEventListener(`click`, function () {",
+			"    document.querySelector(`THING_TO_DELETE`).remove()",
+			"});"			
+		],
+		"description": "delete an element"
+	},
+
+// OBJECT
 	"Object": {
 		"scope": "javascript,typescript",
 		"prefix": "ob",
@@ -119,10 +190,10 @@
 			"    },",
 			"};"
 		],
-		"description": "create objects"
+		"description": "create object literal"
 	},
 	
-
+// ARRAYS	
 	"map array": {
 		"scope": "javascript,typescript",
 		"prefix": "ma",
@@ -154,10 +225,50 @@
 			"}, INITIAL_VALUE);"
 		],
 		"description": "use reduce method on an array"
-	},	
+	},
+	
+// OOP
+
+	"Constructor Function": {
+		"prefix": "cons",
+		"body": [
+		"const NAME_OF_CONSTRUCTOR_FUNCTION = function (PARAMETER_1, PARAMETER_2) {",
+		"    this.PARAMETER_1 = PARAMETER_1;",
+		"    this.PARAMETER_2 = PARAMETER_2;",
+		"};",
+		"",
+		"NAME_OF_CONSTRUCTOR_FUNCTION.prototype.NAME_OF_METHOD = function () {",
+		"",
+		"};",
+		"",
+		"const INSTANCE_NAME = new NAME_OF_CONSTRUCTOR_FUNCTION(`ARGUMENT_1`, `ARGUMENT_2`);"
+		],
+		"description": "construction function with instance"
+	},
+
+	"Create a Class": {
+		"prefix": "class",
+		"body": [
+		"class CLASS_NAME {",
+		"    constructor(PARAMETER_1, PARAMETER_2) {",
+		"        this.PARAMETER_1 = PARAMETER_1;",
+		"        this.PARAMETER_2 = PARAMETER_2;",
+		"    }",
+		"",
+		"    METHOD_NAME_1() {",
+		"",
+		"    }",
+		"",
+		"    METHOD_NAME_2() {",
+		"",
+		"    }",
+		"};",
+		"",
+		"const INSTANCE_NAME = new CLASS_NAME(ARGUMENT_1, ARGUMENT_2);"
+		],
+		"description": "Create a Class"
+	},
 
 }
-
-
 
 	
