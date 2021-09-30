@@ -35,7 +35,7 @@
 		"body": [
 			"const FUNCTION_NAME = function() {",
 			"",
-			"}",
+			"};",
 		],
 		"description": "create function expression"
 	},
@@ -46,7 +46,7 @@
 		"body": [
 			"const FUNCTION_NAME = (PARAM1, PARAM2) => {",
 			"",
-			"}",
+			"};",
 		],
 		"description": "create arrow function"
 	},
@@ -193,7 +193,8 @@
 		"description": "create object literal"
 	},
 	
-// ARRAYS	
+// ARRAY
+	//redo this
 	"map array": {
 		"scope": "javascript,typescript",
 		"prefix": "ma",
@@ -205,6 +206,7 @@
 		"description": "use map method on an array"
 	},
 
+	//redo this
 	"filter array": {
 		"scope": "javascript,typescript",
 		"prefix": "fi",
@@ -216,6 +218,7 @@
 		"description": "use filter method on an array"
 	},
 
+	//redo this
 	"reduce array": {
 		"scope": "javascript,typescript",
 		"prefix": "re",
@@ -228,7 +231,6 @@
 	},
 	
 // OOP
-
 	"Constructor Function": {
 		"prefix": "cons",
 		"body": [
@@ -271,23 +273,38 @@
 
 // Asynchronous JavaScript
 	"Create XMLHttpRequest": {
-		"prefix": "XML",
+		"prefix": "xml",
 		"body": [
-		"const REQUEST_URL_NAME = `API_ENDPOINT`;",
+		"const URL_NAME = `API_ENDPOINT`;",
 		"const REQUEST_NAME = new XMLHttpRequest();",
 		"",
-		"REQUEST_NAME.open(`GET_OR_POST`, REQUEST_URL_NAME);",
+		"REQUEST_NAME.open(`GET_OR_POST`, URL_NAME);",
 		"REQUEST_NAME.send();",
 		"",
 		"REQUEST_NAME.addEventListener(`load`, function () {",
-		"    data = JSON.parse(this.responseText);",
+		"    const data = JSON.parse(this.responseText);",
 		"    console.log(data);",
-		"})",
-		""
+		"})"
 		],
 		"description": "Create XMLHttpRequest"
-	}
-	
+	},
+
+	"Create fetch": {
+		"prefix": "fet",
+		"body": [
+		"const URL_NAME = `API_ENDPOINT`;",
+		"",
+		"fetch(URL_NAME)",
+		".then(response => response.json())",
+		".then(data => {",
+		"    // Do something with the data",
+		"    console.log(data[0]);",
+		"})",
+		".catch(error => alert(error));"
+		],
+		"description": "Create fetch"
+	},
+
 }
 
 	
