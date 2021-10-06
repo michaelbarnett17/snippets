@@ -1,12 +1,4 @@
 {
-	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-
 // LOGGING
 	"Print to console": {
 		"scope": "javascript,typescript",
@@ -194,36 +186,35 @@
 	},
 	
 // ARRAY
-	//redo this
 	"map array": {
 		"scope": "javascript,typescript",
 		"prefix": "ma",
 		"body": [
-			"const NEW_ARRAY_NAME = OBJECT.map(function (ITEM_NAME) {",
-			"    return // ITEM_YOU_WANT_IN_NEW_ARRAY",
+			"const NEW_ARRAY_NAME = ARRAY_TO_MAP.map((arrayElement) => {",
+			"    // what you want done to each element",
+			"    return arrayElement",
 			"});"
 		],
 		"description": "use map method on an array"
 	},
 
-	//redo this
 	"filter array": {
 		"scope": "javascript,typescript",
 		"prefix": "fi",
 		"body": [
-			"const NEW_ARRAY_NAME = OBJECT.filter(function (ITEM_NAME) {",
-			"    return // FILTER CONDITION ON ITEM_NAME",
+			"const NEW_ARRAY_NAME = ARRAY_TO_FILTER.filter((arrayElement) => {",
+			"    // filter condition on the arrayElement",
+			"    return (// arrayElement > < == something);",
 			"});"
 		],
 		"description": "use filter method on an array"
 	},
 
-	//redo this
 	"reduce array": {
 		"scope": "javascript,typescript",
 		"prefix": "re",
 		"body": [
-			"const REDUCED_VALUE_NAME = ARRAY_TO_REDUCE.reduce(function (accumulator, currentElement, currentIndex_OPTIONAL, array_OPTIONAL) {",
+			"const REDUCED_VALUE_NAME = ARRAY_TO_REDUCE.reduce((accumulator, currentElement, currentIndex_OPTIONAL, array_OPTIONAL) => {",
 			"    return accumulator + currentElement",
 			"}, INITIAL_VALUE);"
 		],
@@ -300,7 +291,11 @@
 		"    // Do something with the data",
 		"    console.log(data[0]);",
 		"})",
-		".catch(error => alert(error));"
+		".catch(error => alert(error))",
+		".finally(() => {",
+		"    // Finally do something",
+		"});"
+
 		],
 		"description": "Create fetch"
 	},
