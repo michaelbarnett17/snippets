@@ -25,7 +25,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "fu",
 		"body": [
-			"const FUNCTION_NAME = function() {",
+			"const FUNCTION_NAME = function () {",
 			"",
 			"};",
 		],
@@ -44,7 +44,7 @@
 	},
 
 // LOOPS
-	"For Loop": {
+	"For Loop Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "for",
 		"body": [
@@ -55,7 +55,7 @@
 		"description": "create for loop"
 	},
 
-	"For of Loop": {
+	"For of Loop Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "foro",
 		"body": [
@@ -84,7 +84,7 @@
 		"body": [
 			"const VARIALBE_NAME = document.querySelector(`CSS_SELECTOR`);",
 			" ",
-			"VARIALBE_NAME.EVENT_NAME =  function() {",
+			"VARIALBE_NAME.EVENT_NAME = function () {",
 			" ",
 			"};"
 		],
@@ -98,7 +98,7 @@
 			"document.querySelector(`CSS_SELECTOR_FOR_COMMON_PARENT`).addEventListener(`click`, function (e) {",
 			"",
 			"    if (e.target.classList.contains(`NAME_OF_CLASS_DONT_USE_SELECTOR_PREFIX`)) {",
-				"    console.log(e.target);",
+			"        console.log(e.target);",
 			"    }",
 			"});"		
 		],
@@ -158,8 +158,8 @@
 		"scope": "javascript,typescript",
 		"prefix": "del",
 		"body": [
-			"document.querySelector(`THING_TO_CLICK`).",
-			"addEventListener(`click`, function () {",
+			"document.querySelector(`THING_TO_CLICK`)",
+			".addEventListener(`click`, function () {",
 			"    document.querySelector(`THING_TO_DELETE`).remove()",
 			"});"			
 		],
@@ -167,9 +167,9 @@
 	},
 
 // OBJECT
-	"Object": {
+	"Object Literal": {
 		"scope": "javascript,typescript",
-		"prefix": "ob",
+		"prefix": "object",
 		"body": [
 			"const OBJECT_NAME = {",
 			"    PROPERTY_1: PROPERTY_1_VALUE,",
@@ -188,7 +188,7 @@
 // ARRAY
 	"map array": {
 		"scope": "javascript,typescript",
-		"prefix": "ma",
+		"prefix": "map",
 		"body": [
 			"const NEW_ARRAY_NAME = ARRAY_TO_MAP.map((arrayElement) => {",
 			"    // what you want done to each element",
@@ -200,7 +200,7 @@
 
 	"filter array": {
 		"scope": "javascript,typescript",
-		"prefix": "fi",
+		"prefix": "filter",
 		"body": [
 			"const NEW_ARRAY_NAME = ARRAY_TO_FILTER.filter((arrayElement) => {",
 			"    // filter condition on the arrayElement",
@@ -212,7 +212,7 @@
 
 	"reduce array": {
 		"scope": "javascript,typescript",
-		"prefix": "re",
+		"prefix": "reduce",
 		"body": [
 			"const REDUCED_VALUE_NAME = ARRAY_TO_REDUCE.reduce((accumulator, currentElement, currentIndex_OPTIONAL, array_OPTIONAL) => {",
 			"    return accumulator + currentElement",
@@ -223,7 +223,7 @@
 	
 // OOP
 	"Constructor Function": {
-		"prefix": "cons",
+		"prefix": "constructor",
 		"body": [
 		"const NAME_OF_CONSTRUCTOR_FUNCTION = function (PARAMETER_1, PARAMETER_2) {",
 		"    this.PARAMETER_1 = PARAMETER_1;",
@@ -281,7 +281,7 @@
 	},
 
 	"Create fetch": {
-		"prefix": "fet",
+		"prefix": "fetch",
 		"body": [
 		"const URL_NAME = `API_ENDPOINT`;",
 		"",
@@ -299,6 +299,25 @@
 		],
 		"description": "Create fetch"
 	},
+
+	"Asynchronous Function": {
+		"prefix": "asy",
+		"body": [
+		  "",
+		  "const FUNCTION_NAME = async function (URL_NAME) {",
+		  "    try {",
+		  "        const RESPONSE_NAME = await fetch(URL_NAME);",
+		  "        const DATA_NAME = await RESPONSE_NAME.json();",
+		  "",
+		  "        // Do something with data",
+		  "        console.log(DATA_NAME);",
+		  "    } catch (err) {",
+		  "        console.error(err);",
+		  "    }",
+		  "}"
+		],
+		"description": "Asynchronous Function"
+	  },
 
 }
 
