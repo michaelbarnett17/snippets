@@ -1,2 +1,4 @@
-place snippets file in:
-C:\Users\Mike\AppData\Roaming\Code\User
+replace this file:
+C:\Users\Mike\AppData\Roaming\Code\User\snippets
+
+with this new snippets file
