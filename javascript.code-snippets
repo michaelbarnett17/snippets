@@ -57,7 +57,7 @@
 
 	"For of Loop Custom": {
 		"scope": "javascript,typescript",
-		"prefix": "foro",
+		"prefix": "forof",
 		"body": [
 			"for (const [i, ITEM_NAME] of OBJECT.entries()) {",
 			"",
@@ -71,7 +71,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "el",
 		"body": [
-			"document.querySelector(`CSS_SELECTOR`).addEventListener(`EVENT_TYPE`, function () {",
+			"document.querySelector('CSS_SELECTOR').addEventListener('EVENT_TYPE', function () {",
 			"",
 			"});"
 		],
@@ -82,7 +82,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "eh",
 		"body": [
-			"const VARIALBE_NAME = document.querySelector(`CSS_SELECTOR`);",
+			"const VARIALBE_NAME = document.querySelector('CSS_SELECTOR');",
 			" ",
 			"VARIALBE_NAME.EVENT_NAME = function () {",
 			" ",
@@ -95,9 +95,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "delegate",
 		"body": [
-			"document.querySelector(`CSS_SELECTOR_FOR_COMMON_PARENT`).addEventListener(`click`, function (e) {",
+			"document.querySelector('CSS_SELECTOR_FOR_COMMON_PARENT').addEventListener('click', function (e) {",
 			"",
-			"    if (e.target.classList.contains(`NAME_OF_CLASS_DONT_USE_SELECTOR_PREFIX`)) {",
+			"    if (e.target.classList.contains('NAME_OF_CLASS_DONT_USE_SELECTOR_PREFIX')) {",
 			"        console.log(e.target);",
 			"    }",
 			"});"		
@@ -110,7 +110,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "qs",
 		"body": [
-			"const VARIALBE_NAME = document.querySelector(`CSS_SELECTOR`);"
+			"const VARIALBE_NAME = document.querySelector('CSS_SELECTOR');"
 		],
 		"description": "create query selector"
 	},
@@ -119,7 +119,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "qsa",
 		"body": [
-			"const VARIALBE_NAME = document.querySelectorAll(`CSS_SELECTOR`);"
+			"const VARIALBE_NAME = document.querySelectorAll('CSS_SELECTOR');"
 		],
 		"description": "create query selector all"
 	},
@@ -129,7 +129,7 @@
 		"prefix": "tn",
 		"body": [
 			"//HTMLCollection will be updated automatically as page changes",
-			"const VARIALBE_NAME = document.getElementsByTagName(`TAG_NAME`);"
+			"const VARIALBE_NAME = document.getElementsByTagName('TAG_NAME');"
 		],
 		"description": "create get elements by tag name"
 	},
@@ -139,7 +139,7 @@
 		"prefix": "cn",
 		"body": [
 			"//HTMLCollection will be updated automatically as page changes",
-			"const VARIALBE_NAME = document.getElementsByClassName(`CLASS_NAME`);"
+			"const VARIALBE_NAME = document.getElementsByClassName('CLASS_NAME');"
 		],
 		"description": "create get elements by class name"
 	},
@@ -149,7 +149,7 @@
 		"prefix": "ins",
 		"body": [
 			"//beforebegin, afterbegin, beforeend, afterend",
-			"document.querySelector(`CSS_SELECTOR`).insertAdjacentHTML(`POSITION`, `TEXT`);"
+			"document.querySelector('CSS_SELECTOR').insertAdjacentHTML('POSITION', 'TEXT');"
 		],
 		"description": "insert adjacent element"
 	},
@@ -158,9 +158,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "del",
 		"body": [
-			"document.querySelector(`THING_TO_CLICK`)",
-			".addEventListener(`click`, function () {",
-			"    document.querySelector(`THING_TO_DELETE`).remove()",
+			"document.querySelector('THING_TO_CLICK')",
+			".addEventListener('click', function () {",
+			"    document.querySelector('THING_TO_DELETE').remove()",
 			"});"			
 		],
 		"description": "delete an element"
@@ -234,7 +234,7 @@
 		"",
 		"};",
 		"",
-		"const INSTANCE_NAME = new NAME_OF_CONSTRUCTOR_FUNCTION(`ARGUMENT_1`, `ARGUMENT_2`);"
+		"const INSTANCE_NAME = new NAME_OF_CONSTRUCTOR_FUNCTION('ARGUMENT_1', 'ARGUMENT_2');"
 		],
 		"description": "construction function (creates a class) with instance"
 	},
@@ -266,13 +266,13 @@
 	"Create XMLHttpRequest": {
 		"prefix": "xml",
 		"body": [
-		"const URL_NAME = `API_ENDPOINT`;",
+		"const URL_NAME = 'API_ENDPOINT';",
 		"const REQUEST_NAME = new XMLHttpRequest();",
 		"",
-		"REQUEST_NAME.open(`GET_OR_POST`, URL_NAME);",
+		"REQUEST_NAME.open('GET_OR_POST', URL_NAME);",
 		"REQUEST_NAME.send();",
 		"",
-		"REQUEST_NAME.addEventListener(`load`, function () {",
+		"REQUEST_NAME.addEventListener('load', function () {",
 		"    const data = JSON.parse(this.responseText);",
 		"    console.log(data);",
 		"})"
@@ -283,7 +283,7 @@
 	"Create fetch": {
 		"prefix": "fetch",
 		"body": [
-		"const URL_NAME = `API_ENDPOINT`;",
+		"const URL_NAME = 'API_ENDPOINT';",
 		"",
 		"fetch(URL_NAME)",
 		".then(response => response.json())",
