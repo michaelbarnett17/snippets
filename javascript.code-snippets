@@ -44,7 +44,7 @@
 	},
 
 // LOOPS
-	"For Loop Custom": {
+	"For Loop - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "for",
 		"body": [
@@ -55,12 +55,12 @@
 		"description": "create for loop"
 	},
 
-	"For of Loop Custom": {
+	"For of Loop - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "forof",
 		"body": [
-			"for (const [i, ITEM_NAME] of OBJECT.entries()) {",
-			"",
+			"for (const [index, entry] of OBJECT.entries()) {",
+			"    console.log(`index \\${index} is \\${entry}`)",
 			"}",
 		],
 		"description": "create for of loop"
@@ -186,7 +186,7 @@
 	},
 	
 // ARRAY
-	"map array": {
+	"Map array": {
 		"scope": "javascript,typescript",
 		"prefix": "map",
 		"body": [
@@ -198,7 +198,7 @@
 		"description": "use map method on an array"
 	},
 
-	"filter array": {
+	"Filter array": {
 		"scope": "javascript,typescript",
 		"prefix": "filter",
 		"body": [
@@ -210,7 +210,7 @@
 		"description": "use filter method on an array"
 	},
 
-	"reduce array": {
+	"Reduce array": {
 		"scope": "javascript,typescript",
 		"prefix": "reduce",
 		"body": [
