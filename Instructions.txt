@@ -1,2 +1,2 @@
-place file in:
-C:\Users\Mike\AppData\Roaming\Code\User\snippets
+place snippets file in:
+C:\Users\Mike\AppData\Roaming\Code\User
