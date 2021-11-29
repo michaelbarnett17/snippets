@@ -185,7 +185,7 @@
 		"description": "create object literal"
 	},
 	
-// ARRAY
+// MAP, FILTER, REDUCE
 	"Map array": {
 		"scope": "javascript,typescript",
 		"prefix": "map",
@@ -202,9 +202,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "filter",
 		"body": [
-			"ARRAY_TO_FILTER.filter((arrayElement) => {",
-			"    // true keeps element, false filters it out",
-			"    return (// BOOLEAN EXPRESSION);",
+			"ARRAY_TO_FILTER.filter((x) => {",
+			"    // true keeps array element x, false filters it out",
+			"    return (BOOLEAN_EXPRESSION);",
 			"});"
 		],
 		"description": "use filter method on an array"
