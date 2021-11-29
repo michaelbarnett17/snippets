@@ -190,9 +190,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "map",
 		"body": [
-			"ARRAY_TO_MAP.map((arrayElement) => {",
+			"ARRAY_TO_MAP.map((x) => {",
 			"    // what you want done to each element",
-			"    return arrayElement",
+			"    return NEW_X",
 			"});"
 		],
 		"description": "use map method on an array"
@@ -214,8 +214,8 @@
 		"scope": "javascript,typescript",
 		"prefix": "reduce",
 		"body": [
-			"ARRAY_TO_REDUCE.reduce((accumulator, currentElement, currentIndex_OPTIONAL, array_OPTIONAL) => {",
-			"    return accumulator + currentElement",
+			"ARRAY_TO_REDUCE.reduce((accumulator, x, currentIndex_OPTIONAL, array_OPTIONAL) => {",
+			"    return accumulator + x",
 			"}, INITIAL_VALUE);"
 		],
 		"description": "use reduce method on an array"
