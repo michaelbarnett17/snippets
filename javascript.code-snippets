@@ -10,10 +10,11 @@
 	},
 
 // FUNCTIONS
-	"Regular Function": {
+	"Function Declaration": {
 		"scope": "javascript,typescript",
 		"prefix": "f",
 		"body": [
+			"// This is hoisted",
 			"function FUNCTION_NAME() {",
 			"",
 			"}",
@@ -25,6 +26,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "fu",
 		"body": [
+			"// This is NOT hoisted",
 			"const FUNCTION_NAME = function () {",
 			"",
 			"};",
@@ -36,6 +38,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "fun",
 		"body": [
+			"// This is NOT hoisted",
 			"const FUNCTION_NAME = (PARAM1, PARAM2) => {",
 			"",
 			"};",
