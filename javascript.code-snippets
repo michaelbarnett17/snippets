@@ -190,7 +190,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "map",
 		"body": [
-			"const NEW_ARRAY_NAME = ARRAY_TO_MAP.map((arrayElement) => {",
+			"ARRAY_TO_MAP.map((arrayElement) => {",
 			"    // what you want done to each element",
 			"    return arrayElement",
 			"});"
@@ -202,9 +202,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "filter",
 		"body": [
-			"const NEW_ARRAY_NAME = ARRAY_TO_FILTER.filter((arrayElement) => {",
-			"    // filter condition on the arrayElement",
-			"    return (// arrayElement > < == something);",
+			"ARRAY_TO_FILTER.filter((arrayElement) => {",
+			"    // true keeps element, false filters it out",
+			"    return (// BOOLEAN EXPRESSION);",
 			"});"
 		],
 		"description": "use filter method on an array"
@@ -214,7 +214,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "reduce",
 		"body": [
-			"const REDUCED_VALUE_NAME = ARRAY_TO_REDUCE.reduce((accumulator, currentElement, currentIndex_OPTIONAL, array_OPTIONAL) => {",
+			"ARRAY_TO_REDUCE.reduce((accumulator, currentElement, currentIndex_OPTIONAL, array_OPTIONAL) => {",
 			"    return accumulator + currentElement",
 			"}, INITIAL_VALUE);"
 		],
