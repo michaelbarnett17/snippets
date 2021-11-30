@@ -14,7 +14,6 @@
 		"scope": "javascript,typescript",
 		"prefix": "f",
 		"body": [
-			"// This is hoisted",
 			"function FUNCTION_NAME() {",
 			"",
 			"}",
@@ -26,7 +25,6 @@
 		"scope": "javascript,typescript",
 		"prefix": "fu",
 		"body": [
-			"// This is NOT hoisted",
 			"const FUNCTION_NAME = function () {",
 			"",
 			"};",
@@ -34,11 +32,19 @@
 		"description": "create function expression"
 	},
 
-	"Arrow Function": {
+	"Arrow Function Short": {
 		"scope": "javascript,typescript",
 		"prefix": "fun",
 		"body": [
-			"// This is NOT hoisted",
+			"const FUNCTION_NAME = () => WHAT_TO_RETURN;",
+		],
+		"description": "create arrow function"
+	},
+
+	"Arrow Function Long": {
+		"scope": "javascript,typescript",
+		"prefix": "func",
+		"body": [
 			"const FUNCTION_NAME = (PARAM1, PARAM2) => {",
 			"",
 			"};",
