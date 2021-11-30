@@ -64,15 +64,15 @@
 		"description": "create for loop"
 	},
 
-	"For of Loop - Custom": {
+	"For of Loop - Map": {
 		"scope": "javascript,typescript",
-		"prefix": "forof",
+		"prefix": "formap",
 		"body": [
-			"for (const [index, entry] of OBJECT.entries()) {",
+			"for (const [index, entry] of MAP_NAME.entries()) {",
 			"    console.log(`index \\${index} is \\${entry}`)",
 			"}",
 		],
-		"description": "create for of loop"
+		"description": "create loop for map"
 	},
 
 // EVENT LISTENER, HANDLER, DELEGATE
