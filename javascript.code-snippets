@@ -5,6 +5,7 @@
 		"prefix": "cl",
 		"body": [
 			"console.log();",
+			"",
 		],
 		"description": "Log output to console"
 	},
@@ -14,7 +15,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "f",
 		"body": [
-			"function FUNCTION_NAME() {",
+			"function ${1:FUNCTION_NAME}($2) {",
 			"",
 			"}",
 		],
@@ -25,7 +26,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "fu",
 		"body": [
-			"const FUNCTION_NAME = function () {",
+			"const ${1:FUNCTION_NAME} = function ($2) {",
 			"",
 			"};",
 		],
@@ -36,20 +37,20 @@
 		"scope": "javascript,typescript",
 		"prefix": "fun",
 		"body": [
-			"const FUNCTION_NAME = () => WHAT_TO_RETURN;",
+			"const ${1:FUNCTION_NAME} = ${2:x} => ${3:WHAT_TO_RETURN};",
 		],
-		"description": "create arrow function"
+		"description": "create arrow function one paramater, one line in body"
 	},
 
 	"Arrow Function Long": {
 		"scope": "javascript,typescript",
 		"prefix": "func",
 		"body": [
-			"const FUNCTION_NAME = (PARAM1, PARAM2) => {",
-			"",
+			"const ${1:FUNCTION_NAME} = (${2:PARAM1}, ${3:PARAM2}) => {",
+			"    return ${4:WHAT_TO_RETURN};",
 			"};",
 		],
-		"description": "create arrow function"
+		"description": "create arrow function multiple parmaters and multiple lines in body"
 	},
 
 // LOOPS
@@ -57,7 +58,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "for",
 		"body": [
-			"for (let i = 0; i < ARRAY_HERE.length; i++) {",
+			"for (let ${1:i} = 0; ${1:i} < ${2:ARRAY_HERE}.length; ${1:i}++) {",
 			"",
 			"}",
 		],
@@ -68,8 +69,8 @@
 		"scope": "javascript,typescript",
 		"prefix": "formap",
 		"body": [
-			"for (const [index, entry] of MAP_NAME.entries()) {",
-			"    console.log(`index \\${index} is \\${entry}`)",
+			"for (const [${1:index}, ${2:entry}] of ${3:MAP_NAME}.entries()) {",
+			"    console.log(`index \\${${1:index}} contains \\${${2:entry}}`)",
 			"}",
 		],
 		"description": "create loop for map"
@@ -80,7 +81,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "el",
 		"body": [
-			"document.querySelector('CSS_SELECTOR').addEventListener('EVENT_TYPE', function () {",
+			"document.querySelector('${1:CSS_SELECTOR}').addEventListener('${2:EVENT_TYPE}', function () {",
 			"",
 			"});"
 		],
@@ -91,9 +92,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "eh",
 		"body": [
-			"const VARIALBE_NAME = document.querySelector('CSS_SELECTOR');",
+			"const ${1:VARIALBE_NAME} = document.querySelector('${2:CSS_SELECTOR}');",
 			" ",
-			"VARIALBE_NAME.EVENT_NAME = function () {",
+			"${1:VARIALBE_NAME}.${3:ON_EVENT_NAME} = function () {",
 			" ",
 			"};"
 		],
@@ -104,9 +105,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "delegate",
 		"body": [
-			"document.querySelector('CSS_SELECTOR_FOR_COMMON_PARENT').addEventListener('click', function (e) {",
+			"document.querySelector('${1:CSS_SELECTOR_FOR_COMMON_PARENT}').addEventListener('click', function (e) {",
 			"",
-			"    if (e.target.classList.contains('NAME_OF_CLASS_DONT_USE_SELECTOR_PREFIX')) {",
+			"    if (e.target.classList.contains('${2:NAME_OF_CLASS_DONT_USE_SELECTOR_PREFIX}')) {",
 			"        console.log(e.target);",
 			"    }",
 			"});"		
@@ -119,7 +120,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "qs",
 		"body": [
-			"const VARIALBE_NAME = document.querySelector('CSS_SELECTOR');"
+			"const ${1:VARIALBE_NAME} = document.querySelector('${2:CSS_SELECTOR}');"
 		],
 		"description": "create query selector"
 	},
@@ -128,7 +129,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "qsa",
 		"body": [
-			"const VARIALBE_NAME = document.querySelectorAll('CSS_SELECTOR');"
+			"const ${1:VARIALBE_NAME} = document.querySelectorAll('${2:CSS_SELECTOR}');"
 		],
 		"description": "create query selector all"
 	},
@@ -138,7 +139,7 @@
 		"prefix": "tn",
 		"body": [
 			"//HTMLCollection will be updated automatically as page changes",
-			"const VARIALBE_NAME = document.getElementsByTagName('TAG_NAME');"
+			"const ${1:VARIALBE_NAME} = document.getElementsByTagName('${2:TAG_NAME}');"
 		],
 		"description": "create get elements by tag name"
 	},
@@ -148,7 +149,7 @@
 		"prefix": "cn",
 		"body": [
 			"//HTMLCollection will be updated automatically as page changes",
-			"const VARIALBE_NAME = document.getElementsByClassName('CLASS_NAME');"
+			"const ${1:VARIALBE_NAME} = document.getElementsByClassName('${2:CLASS_NAME}');"
 		],
 		"description": "create get elements by class name"
 	},
@@ -158,7 +159,7 @@
 		"prefix": "ins",
 		"body": [
 			"//beforebegin, afterbegin, beforeend, afterend",
-			"document.querySelector('CSS_SELECTOR').insertAdjacentHTML('POSITION', 'TEXT');"
+			"document.querySelector('${1:CSS_SELECTOR}').insertAdjacentHTML('${2:POSITION}', '${3:TEXT}');"
 		],
 		"description": "insert adjacent element"
 	},
@@ -167,9 +168,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "del",
 		"body": [
-			"document.querySelector('THING_TO_CLICK')",
+			"document.querySelector('${1:THING_TO_CLICK}')",
 			".addEventListener('click', function () {",
-			"    document.querySelector('THING_TO_DELETE').remove()",
+			"    document.querySelector('${2:THING_TO_DELETE}').remove()",
 			"});"			
 		],
 		"description": "delete an element"
@@ -180,14 +181,14 @@
 		"scope": "javascript,typescript",
 		"prefix": "object",
 		"body": [
-			"const OBJECT_NAME = {",
-			"    PROPERTY_1: PROPERTY_1_VALUE,",
-			"    PROPERTY_2: PROPERTY_2_VALUE,",
-			"    METHOD_1: function () {",
-			"        //FUNCTION BODY",
+			"const ${1:OBJECT_NAME} = {",
+			"    ${2:PROPERTY_1}: ${6:PROPERTY_1_VALUE},",
+			"    ${3:PROPERTY_2}: ${7:PROPERTY_1_VALUE},",
+			"    ${4:METHOD_1}: function () {",
+			"",
 			"    },",
-			"    METHOD_2: function () {",
-			"        //FUNCTION BODY",
+			"    ${5:METHOD_2}: function () {",
+			"",
 			"    },",
 			"};"
 		],
@@ -199,7 +200,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "map",
 		"body": [
-			"ARRAY_TO_MAP.map((x) => {",
+			"${1:ARRAY_TO_MAP}.map((x) => {",
 			"    // what you want done to each element",
 			"    return NEW_X",
 			"});"
@@ -211,7 +212,7 @@
 		"scope": "javascript,typescript",
 		"prefix": "filter",
 		"body": [
-			"ARRAY_TO_FILTER.filter((x) => {",
+			"${1:ARRAY_TO_FILTER}.filter((x) => {",
 			"    // true keeps array element x, false filters it out",
 			"    return (BOOLEAN_EXPRESSION);",
 			"});"
@@ -223,9 +224,9 @@
 		"scope": "javascript,typescript",
 		"prefix": "reduce",
 		"body": [
-			"ARRAY_TO_REDUCE.reduce((accumulator, x, currentIndex_OPTIONAL, array_OPTIONAL) => {",
-			"    return accumulator + x",
-			"}, INITIAL_VALUE);"
+			"${1:ARRAY_TO_REDUCE}.reduce((${2:accumulator}, ${3:x}, ${4:currentIndex_OPTIONAL}, ${5:array_OPTIONAL}) => {",
+			"    return ${2:accumulator} + ${3:x}",
+			"}, ${6:INITIAL_VALUE});"
 		],
 		"description": "use reduce method on an array"
 	},
@@ -234,16 +235,15 @@
 	"Constructor Function": {
 		"prefix": "constructor",
 		"body": [
-		"const NAME_OF_CONSTRUCTOR_FUNCTION = function (PARAMETER_1, PARAMETER_2) {",
-		"    this.PARAMETER_1 = PARAMETER_1;",
-		"    this.PARAMETER_2 = PARAMETER_2;",
+		"const ${1:NAME_OF_CONSTRUCTOR_FUNCTION} = function (${5:PARAMETER_1}, ${6:PARAMETER_2}) {",
+		"    this.${2:NAME_1} = ${5:PARAMETER_1};",
+		"    this.${3:NAME_2} = ${6:PARAMETER_2};",
+		"    this.${4:METHOD_1} = function() {",
+		"",
+		"    }",
 		"};",
 		"",
-		"NAME_OF_CONSTRUCTOR_FUNCTION.prototype.NAME_OF_METHOD = function () {",
-		"",
-		"};",
-		"",
-		"const INSTANCE_NAME = new NAME_OF_CONSTRUCTOR_FUNCTION('ARGUMENT_1', 'ARGUMENT_2');"
+		"const ${8:INSTANCE_NAME} = new ${1:NAME_OF_CONSTRUCTOR_FUNCTION}(${9:ARGUMENT_1}, ${10:ARGUMENT_2});"
 		],
 		"description": "construction function (creates a class) with instance"
 	},
@@ -251,22 +251,22 @@
 	"Create a Class": {
 		"prefix": "class",
 		"body": [
-		"class CLASS_NAME {",
-		"    constructor(PARAMETER_1, PARAMETER_2) {",
-		"        this.PARAMETER_1 = PARAMETER_1;",
-		"        this.PARAMETER_2 = PARAMETER_2;",
+		"class ${1:CLASS_NAME} {",
+		"    constructor(${7:PARAMETER_1}, ${8:PARAMETER_2}) {",
+		"        this.${3:NAME_1} = ${7:PARAMETER_1};",
+		"        this.${4:NAME_2} = ${8:PARAMETER_2};",
 		"    }",
 		"",
-		"    METHOD_NAME_1() {",
+		"    ${5:METHOD_NAME_1}() {",
 		"",
 		"    }",
 		"",
-		"    METHOD_NAME_2() {",
+		"    ${6:METHOD_NAME_2}() {",
 		"",
 		"    }",
 		"};",
 		"",
-		"const INSTANCE_NAME = new CLASS_NAME(ARGUMENT_1, ARGUMENT_2);"
+		"const ${9:INSTANCE_NAME} = new ${1:CLASS_NAME}(${10:ARGUMENT_1}, ${11:ARGUMENT_2});"
 		],
 		"description": "Create a Class"
 	},
@@ -275,13 +275,13 @@
 	"Create XMLHttpRequest": {
 		"prefix": "xml",
 		"body": [
-		"const URL_NAME = 'API_ENDPOINT';",
-		"const REQUEST_NAME = new XMLHttpRequest();",
+		"const ${1:URL_NAME} = '${3:API_ENDPOINT}';",
+		"const ${2:REQUEST_NAME} = new XMLHttpRequest();",
 		"",
-		"REQUEST_NAME.open('GET_OR_POST', URL_NAME);",
-		"REQUEST_NAME.send();",
+		"${2:REQUEST_NAME}.open('${4:GET_OR_POST}', ${1:URL_NAME});",
+		"${2:REQUEST_NAME}.send();",
 		"",
-		"REQUEST_NAME.addEventListener('load', function () {",
+		"${2:REQUEST_NAME}.addEventListener('load', function () {",
 		"    const data = JSON.parse(this.responseText);",
 		"    console.log(data);",
 		"})"
@@ -292,9 +292,9 @@
 	"Create fetch": {
 		"prefix": "fetch",
 		"body": [
-		"const URL_NAME = 'API_ENDPOINT';",
+		"const ${1:URL_NAME} = '${2:API_ENDPOINT}';",
 		"",
-		"fetch(URL_NAME)",
+		"fetch(${1:URL_NAME})",
 		".then(response => response.json())",
 		".then(data => {",
 		"    // Do something with the data",
@@ -313,17 +313,17 @@
 		"prefix": "asy",
 		"body": [
 		  "",
-		  "const FUNCTION_NAME = async function (URL_NAME) {",
+		  "const ${1:FUNCTION_NAME} = async function (${4:URL_NAME}) {",
 		  "    try {",
-		  "        const RESPONSE_NAME = await fetch(URL_NAME);",
-		  "        const DATA_NAME = await RESPONSE_NAME.json();",
+		  "        const ${2:RESPONSE_NAME} = await fetch(${4:URL_NAME});",
+		  "        const ${3:DATA_NAME} = await ${2:RESPONSE_NAME}.json();",
 		  "",
 		  "        // Do something with data",
-		  "        console.log(DATA_NAME);",
+		  "        console.log(${3:DATA_NAME});",
 		  "    } catch (err) {",
 		  "        console.error(err);",
 		  "    }",
-		  "}"
+		  "};"
 		],
 		"description": "Asynchronous Function"
 	  },
