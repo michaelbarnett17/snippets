@@ -1,6 +1,6 @@
 {
 // LOGGING
-	"Print to console": {
+	"Print to console - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "cl",
 		"body": [
@@ -11,7 +11,7 @@
 	},
 
 // FUNCTIONS
-	"Function Declaration": {
+	"Function Declaration - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "f",
 		"body": [
@@ -22,7 +22,7 @@
 		"description": "create function declaration"
 	},	
 
-	"Function Expression": {
+	"Function Expression - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "fu",
 		"body": [
@@ -33,7 +33,7 @@
 		"description": "create function expression"
 	},
 
-	"Arrow Function Short": {
+	"Arrow Function Short - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "fun",
 		"body": [
@@ -42,7 +42,7 @@
 		"description": "create arrow function one paramater, one line in body"
 	},
 
-	"Arrow Function Long": {
+	"Arrow Function Long - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "func",
 		"body": [
@@ -65,7 +65,7 @@
 		"description": "create for loop"
 	},
 
-	"For of Loop - Map": {
+	"For Map - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "formap",
 		"body": [
@@ -77,7 +77,7 @@
 	},
 
 // EVENT LISTENER, HANDLER, DELEGATE
-	"Event Listener": {
+	"Event Listener - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "el",
 		"body": [
@@ -88,7 +88,7 @@
 		"description": "create event listener"
 	},
 
-	"Event Handler": {
+	"Event Handler - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "eh",
 		"body": [
@@ -101,7 +101,7 @@
 		"description": "create event handler"
 	},
 
-	"Delegate an Event": {
+	"Delegate an Event - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "delegate",
 		"body": [
@@ -116,7 +116,7 @@
 	},
 
 // DOM MANIPULATION
-	"Query Selector": {
+	"Query Selector  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "qs",
 		"body": [
@@ -125,7 +125,7 @@
 		"description": "create query selector"
 	},
 
-	"Query Selector All": {
+	"Query Selector All  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "qsa",
 		"body": [
@@ -134,7 +134,7 @@
 		"description": "create query selector all"
 	},
 	
-	"Get Elements By Tag Name": {
+	"Get Elements By Tag Name  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "tn",
 		"body": [
@@ -144,7 +144,7 @@
 		"description": "create get elements by tag name"
 	},
 	
-	"Get Elements By Class Name": {
+	"Get Elements By Class Name  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "cn",
 		"body": [
@@ -154,7 +154,7 @@
 		"description": "create get elements by class name"
 	},
 	
-	"Insert Adjacent Element": {
+	"Insert Adjacent Element  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "ins",
 		"body": [
@@ -164,7 +164,7 @@
 		"description": "insert adjacent element"
 	},
 
-	"Delete Element": {
+	"Delete Element - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "del",
 		"body": [
@@ -177,7 +177,7 @@
 	},
 
 // OBJECT
-	"Object Literal": {
+	"Object Literal - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "object",
 		"body": [
@@ -196,7 +196,7 @@
 	},
 	
 // MAP, FILTER, REDUCE
-	"Map array": {
+	"Map Array - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "map",
 		"body": [
@@ -208,7 +208,7 @@
 		"description": "use map method on an array"
 	},
 
-	"Filter array": {
+	"Filter Array - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "filter",
 		"body": [
@@ -220,7 +220,7 @@
 		"description": "use filter method on an array"
 	},
 
-	"Reduce array": {
+	"Reduce Array - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "reduce",
 		"body": [
@@ -232,7 +232,7 @@
 	},
 	
 // OOP
-	"Constructor Function": {
+	"Constructor Function - Custom": {
 		"prefix": "constructor",
 		"body": [
 		"const ${1:NAME_OF_CONSTRUCTOR_FUNCTION} = function (${5:PARAMETER_1}, ${6:PARAMETER_2}) {",
@@ -248,7 +248,7 @@
 		"description": "construction function (creates a class) with instance"
 	},
 
-	"Create a Class": {
+	"Class - Custom": {
 		"prefix": "class",
 		"body": [
 		"class ${1:CLASS_NAME} {",
@@ -272,7 +272,7 @@
 	},
 
 // Asynchronous JavaScript
-	"Create XMLHttpRequest": {
+	"XMLHttpRequest - Custom": {
 		"prefix": "xml",
 		"body": [
 		"const ${1:URL_NAME} = '${3:API_ENDPOINT}';",
@@ -289,7 +289,7 @@
 		"description": "Create XMLHttpRequest"
 	},
 
-	"Create fetch": {
+	"Fetch - Custom": {
 		"prefix": "fetch",
 		"body": [
 		"const ${1:URL_NAME} = '${2:API_ENDPOINT}';",
@@ -309,7 +309,7 @@
 		"description": "Create fetch"
 	},
 
-	"Asynchronous Function": {
+	"Asynchronous Function - Custom": {
 		"prefix": "asy",
 		"body": [
 		  "",
