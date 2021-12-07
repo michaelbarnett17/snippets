@@ -235,15 +235,19 @@
 	"Constructor Function - Custom": {
 		"prefix": "constructor",
 		"body": [
-		"const ${1:NAME_OF_CONSTRUCTOR_FUNCTION} = function (${5:PARAMETER_1}, ${6:PARAMETER_2}) {",
-		"    this.${2:NAME_1} = ${5:PARAMETER_1};",
-		"    this.${3:NAME_2} = ${6:PARAMETER_2};",
+		"const ${1:NAME_OF_CONSTRUCTOR_FUNCTION} = function (${6:PARAMETER_1}, ${7:PARAMETER_2}) {",
+		"    this.${2:NAME_1} = ${6:PARAMETER_1};",
+		"    this.${3:NAME_2} = ${7:PARAMETER_2};",
 		"    this.${4:METHOD_1} = function() {",
 		"",
 		"    }",
 		"};",
 		"",
-		"const ${8:INSTANCE_NAME} = new ${1:NAME_OF_CONSTRUCTOR_FUNCTION}(${9:ARGUMENT_1}, ${10:ARGUMENT_2});"
+		"${1:NAME_OF_CONSTRUCTOR_FUNCTION}.prototype.${5:PROTOTYPE_METHOD_1} = function() {",
+		"",
+		" }",
+		"",
+		"const ${8:INSTANCE_NAME} = new ${1:NAME_OF_CONSTRUCTOR_FUNCTION}(${10:ARGUMENT_1}, ${11:ARGUMENT_2});"
 		],
 		"description": "construction function (creates a class) with instance"
 	},
