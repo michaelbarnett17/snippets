@@ -1,5 +1,5 @@
 {
-// LOGGING
+	// LOGGING
 	"Print to console - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "cl",
@@ -9,8 +9,34 @@
 		],
 		"description": "Log output to console"
 	},
-
-// FUNCTIONS
+	// CONDITIONAL STATEMENTS
+	"Switch Statement - Custom": {
+		"scope": "javascript,typescript",
+		"prefix": "switch",
+		"body": [
+			"switch (${1:INPUT_PARAMATER}) {",
+			"    case ${2:VALUE_1}:",
+			"        ${4:STATEMENT_1}",
+			"        break;",
+			"    case ${3:VALUE_2}:",
+			"        ${5:STATEMENT_2}",
+			"        break;",
+			"    default:",
+			"        ${6:STATEMENT_3}",
+			"    break;",
+			"}",
+		],
+		"description": "Switch Statement"
+	},
+	"Ternary Operator - Custom": {
+		"scope": "javascript,typescript",
+		"prefix": "ter",
+		"body": [
+			"${1:CONDITION} ? ${2:RETURN_IF_TRUE} : ${3:RETURN_IF_FALSE}",
+		],
+		"description": "Ternary Operator - Custom"
+	},
+	// FUNCTIONS
 	"Function Declaration - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "f",
@@ -20,8 +46,7 @@
 			"}",
 		],
 		"description": "create function declaration"
-	},	
-
+	},
 	"Function Expression - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "fu",
@@ -32,7 +57,6 @@
 		],
 		"description": "create function expression"
 	},
-
 	"Arrow Function Short - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "fun",
@@ -41,7 +65,6 @@
 		],
 		"description": "create arrow function one paramater, one line in body"
 	},
-
 	"Arrow Function Long - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "func",
@@ -52,8 +75,7 @@
 		],
 		"description": "create arrow function multiple parmaters and multiple lines in body"
 	},
-
-// LOOPS
+	// LOOPS
 	"For Loop - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "for",
@@ -64,7 +86,6 @@
 		],
 		"description": "create for loop"
 	},
-
 	"For Map - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "formap",
@@ -75,8 +96,7 @@
 		],
 		"description": "create loop for map"
 	},
-
-// EVENT LISTENER, HANDLER, DELEGATE
+	// EVENT LISTENER, HANDLER, DELEGATE
 	"Event Listener - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "el",
@@ -87,7 +107,6 @@
 		],
 		"description": "create event listener"
 	},
-
 	"Event Handler - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "eh",
@@ -100,7 +119,6 @@
 		],
 		"description": "create event handler"
 	},
-
 	"Delegate an Event - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "delegate",
@@ -110,12 +128,11 @@
 			"    if (e.target.classList.contains('${2:NAME_OF_CLASS_DONT_USE_SELECTOR_PREFIX}')) {",
 			"        console.log(e.target);",
 			"    }",
-			"});"		
+			"});"
 		],
 		"description": "delegate an event"
 	},
-
-// DOM MANIPULATION
+	// DOM MANIPULATION
 	"Query Selector  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "qs",
@@ -124,7 +141,6 @@
 		],
 		"description": "create query selector"
 	},
-
 	"Query Selector All  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "qsa",
@@ -133,7 +149,6 @@
 		],
 		"description": "create query selector all"
 	},
-	
 	"Get Elements By Tag Name  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "tn",
@@ -143,7 +158,6 @@
 		],
 		"description": "create get elements by tag name"
 	},
-	
 	"Get Elements By Class Name  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "cn",
@@ -153,7 +167,6 @@
 		],
 		"description": "create get elements by class name"
 	},
-	
 	"Insert Adjacent Element  - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "ins",
@@ -163,7 +176,6 @@
 		],
 		"description": "insert adjacent element"
 	},
-
 	"Delete Element - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "del",
@@ -171,12 +183,11 @@
 			"document.querySelector('${1:THING_TO_CLICK}')",
 			".addEventListener('click', function () {",
 			"    document.querySelector('${2:THING_TO_DELETE}').remove()",
-			"});"			
+			"});"
 		],
 		"description": "delete an element"
 	},
-
-// OBJECT
+	// OBJECT
 	"Object Literal - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "object",
@@ -194,8 +205,7 @@
 		],
 		"description": "create object literal"
 	},
-	
-// MAP, FILTER, REDUCE
+	// MAP, FILTER, REDUCE
 	"Map Array - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "map",
@@ -207,7 +217,6 @@
 		],
 		"description": "use map method on an array"
 	},
-
 	"Filter Array - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "filter",
@@ -219,7 +228,6 @@
 		],
 		"description": "use filter method on an array"
 	},
-
 	"Reduce Array - Custom": {
 		"scope": "javascript,typescript",
 		"prefix": "reduce",
@@ -230,108 +238,99 @@
 		],
 		"description": "use reduce method on an array"
 	},
-	
-// OOP
+	// OOP
 	"Constructor Function - Custom": {
 		"prefix": "constructor",
 		"body": [
-		"const ${1:NAME_OF_CONSTRUCTOR_FUNCTION} = function (${6:PARAMETER_1}, ${7:PARAMETER_2}) {",
-		"    this.${2:NAME_1} = ${6:PARAMETER_1};",
-		"    this.${3:NAME_2} = ${7:PARAMETER_2};",
-		"    this.${4:METHOD_1} = function() {",
-		"",
-		"    }",
-		"};",
-		"",
-		"${1:NAME_OF_CONSTRUCTOR_FUNCTION}.prototype.${5:PROTOTYPE_METHOD_1} = function() {",
-		"",
-		" }",
-		"",
-		"const ${8:INSTANCE_NAME} = new ${1:NAME_OF_CONSTRUCTOR_FUNCTION}(${10:ARGUMENT_1}, ${11:ARGUMENT_2});"
+			"const ${1:NAME_OF_CONSTRUCTOR_FUNCTION} = function (${6:PARAMETER_1}, ${7:PARAMETER_2}) {",
+			"    this.${2:NAME_1} = ${6:PARAMETER_1};",
+			"    this.${3:NAME_2} = ${7:PARAMETER_2};",
+			"    this.${4:METHOD_1} = function() {",
+			"",
+			"    }",
+			"};",
+			"",
+			"${1:NAME_OF_CONSTRUCTOR_FUNCTION}.prototype.${5:PROTOTYPE_METHOD_1} = function() {",
+			"",
+			" }",
+			"",
+			"const ${8:INSTANCE_NAME} = new ${1:NAME_OF_CONSTRUCTOR_FUNCTION}(${10:ARGUMENT_1}, ${11:ARGUMENT_2});"
 		],
 		"description": "construction function (creates a class) with instance"
 	},
-
 	"Class - Custom": {
 		"prefix": "class",
 		"body": [
-		"class ${1:CLASS_NAME} {",
-		"    constructor(${7:PARAMETER_1}, ${8:PARAMETER_2}) {",
-		"        this.${3:NAME_1} = ${7:PARAMETER_1};",
-		"        this.${4:NAME_2} = ${8:PARAMETER_2};",
-		"    }",
-		"",
-		"    ${5:METHOD_NAME_1}() {",
-		"",
-		"    }",
-		"",
-		"    ${6:METHOD_NAME_2}() {",
-		"",
-		"    }",
-		"};",
-		"",
-		"const ${9:INSTANCE_NAME} = new ${1:CLASS_NAME}(${10:ARGUMENT_1}, ${11:ARGUMENT_2});"
+			"class ${1:CLASS_NAME} {",
+			"    constructor(${7:PARAMETER_1}, ${8:PARAMETER_2}) {",
+			"        this.${3:NAME_1} = ${7:PARAMETER_1};",
+			"        this.${4:NAME_2} = ${8:PARAMETER_2};",
+			"    }",
+			"",
+			"    ${5:METHOD_NAME_1}() {",
+			"",
+			"    }",
+			"",
+			"    ${6:METHOD_NAME_2}() {",
+			"",
+			"    }",
+			"};",
+			"",
+			"const ${9:INSTANCE_NAME} = new ${1:CLASS_NAME}(${10:ARGUMENT_1}, ${11:ARGUMENT_2});"
 		],
 		"description": "Create a Class"
 	},
-
-// Asynchronous JavaScript
+	// ASYNCHRONOUS JAVASCRIPT
 	"XMLHttpRequest - Custom": {
 		"prefix": "xml",
 		"body": [
-		"const ${1:URL_NAME} = '${3:API_ENDPOINT}';",
-		"const ${2:REQUEST_NAME} = new XMLHttpRequest();",
-		"",
-		"${2:REQUEST_NAME}.open('${4:GET_OR_POST}', ${1:URL_NAME});",
-		"${2:REQUEST_NAME}.send();",
-		"",
-		"${2:REQUEST_NAME}.addEventListener('load', function () {",
-		"    const data = JSON.parse(this.responseText);",
-		"    console.log(data);",
-		"})"
+			"const ${1:URL_NAME} = '${3:API_ENDPOINT}';",
+			"const ${2:REQUEST_NAME} = new XMLHttpRequest();",
+			"",
+			"${2:REQUEST_NAME}.open('${4:GET_OR_POST}', ${1:URL_NAME});",
+			"${2:REQUEST_NAME}.send();",
+			"",
+			"${2:REQUEST_NAME}.addEventListener('load', function () {",
+			"    const data = JSON.parse(this.responseText);",
+			"    console.log(data);",
+			"})"
 		],
 		"description": "Create XMLHttpRequest"
 	},
-
 	"Fetch - Custom": {
 		"prefix": "fetch",
 		"body": [
-		"const ${1:URL_NAME} = '${2:API_ENDPOINT}';",
-		"",
-		"fetch(${1:URL_NAME})",
-		".then(response => response.json())",
-		".then(data => {",
-		"    // Do something with the data",
-		"    console.log(data[0]);",
-		"})",
-		".catch(error => alert(error))",
-		".finally(() => {",
-		"    // Finally do something",
-		"});"
-
+			"const ${1:URL_NAME} = '${2:API_ENDPOINT}';",
+			"",
+			"fetch(${1:URL_NAME})",
+			".then(response => response.json())",
+			".then(data => {",
+			"    // Do something with the data",
+			"    console.log(data[0]);",
+			"})",
+			".catch(error => alert(error))",
+			".finally(() => {",
+			"    // Finally do something",
+			"});"
 		],
 		"description": "Create fetch"
 	},
-
 	"Asynchronous Function - Custom": {
 		"prefix": "asy",
 		"body": [
-		  "",
-		  "const ${1:FUNCTION_NAME} = async function (${4:URL_NAME}) {",
-		  "    try {",
-		  "        const ${2:RESPONSE_NAME} = await fetch(${4:URL_NAME});",
-		  "        const ${3:DATA_NAME} = await ${2:RESPONSE_NAME}.json();",
-		  "",
-		  "        // Do something with data",
-		  "        console.log(${3:DATA_NAME});",
-		  "    } catch (err) {",
-		  "        console.error(err);",
-		  "    }",
-		  "};"
+			"",
+			"const ${1:FUNCTION_NAME} = async function (${4:URL_NAME}) {",
+			"    try {",
+			"        const ${2:RESPONSE_NAME} = await fetch(${4:URL_NAME});",
+			"        const ${3:DATA_NAME} = await ${2:RESPONSE_NAME}.json();",
+			"",
+			"        // Do something with data",
+			"        console.log(${3:DATA_NAME});",
+			"    } catch (err) {",
+			"        console.error(err);",
+			"    }",
+			"};"
 		],
 		"description": "Asynchronous Function"
-	  },
-
+	},
 }
-
-	
