@@ -333,4 +333,15 @@
 		],
 		"description": "Asynchronous Function"
 	},
+	// RANDOM
+	"Random Integer - Custom": {
+		"scope": "javascript,typescript",
+		"prefix": "rand",
+		"body": [
+			"function randomIntInclusive(min, max) {",
+			"    return Math.floor(Math.random() * (max - min + 1) + min)",
+			"}",
+		],
+		"description": "Random Integer - Custom"
+	},
 }
