@@ -39,7 +39,7 @@
 	// FUNCTIONS
 	"Function Declaration - Custom": {
 		"scope": "javascript,typescript",
-		"prefix": "f",
+		"prefix": "fu",
 		"body": [
 			"function ${1:FUNCTION_NAME}($2) {",
 			"",
@@ -49,7 +49,7 @@
 	},
 	"Function Expression - Custom": {
 		"scope": "javascript,typescript",
-		"prefix": "fu",
+		"prefix": "fun",
 		"body": [
 			"const ${1:FUNCTION_NAME} = function ($2) {",
 			"",
@@ -59,15 +59,15 @@
 	},
 	"Arrow Function Short - Custom": {
 		"scope": "javascript,typescript",
-		"prefix": "fun",
+		"prefix": "ar",
 		"body": [
-			"const ${1:FUNCTION_NAME} = ${2:x} => ${3:WHAT_TO_RETURN};",
+			"const ${1:FUNCTION_NAME} = (${2:PARAM1}) => ${3:WHAT_TO_RETURN};",
 		],
 		"description": "create arrow function one paramater, one line in body"
 	},
 	"Arrow Function Long - Custom": {
 		"scope": "javascript,typescript",
-		"prefix": "func",
+		"prefix": "arr",
 		"body": [
 			"const ${1:FUNCTION_NAME} = (${2:PARAM1}, ${3:PARAM2}) => {",
 			"    return ${4:WHAT_TO_RETURN};",
