@@ -97,6 +97,24 @@
 		"description": "declare string"
 	},
 
+	// ANGULAR ///////////////////////////////////////////////////////////////////
 
-	
+	// Component
+	"NG - component": {
+		"scope": "typescript",
+		"prefix": "component",
+		"body": [
+		"import { Component } from '@angular/core';",
+		"",
+		"@Component({",
+		"    selector: '${2:SELECTOR_NAME}',",
+		"    template: '${3:HTML_TO_RENDER}'",
+		"})",
+		"export class ${1:ComponentName}Component {",
+		"",
+		"}"
+		],
+		"description": "a basic component"
+	},
+
 }
