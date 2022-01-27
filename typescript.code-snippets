@@ -87,6 +87,7 @@
 		"description": "Create a Class"
 	},
 
+	// Modules
 	"TS - import": {
 		"scope": "typescript",
 		"prefix": "import",
