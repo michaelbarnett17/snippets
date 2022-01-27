@@ -243,8 +243,8 @@
 		"prefix": "constructor",
 		"body": [
 			"const ${1:NAME_OF_CONSTRUCTOR_FUNCTION} = function (${6:PARAMETER_1}, ${7:PARAMETER_2}) {",
-			"    this.${2:NAME_1} = ${6:PARAMETER_1};",
-			"    this.${3:NAME_2} = ${7:PARAMETER_2};",
+			"    this.${2:VARIABLE_NAME_1} = ${6:PARAMETER_1};",
+			"    this.${3:VARIABLE_NAME_2} = ${7:PARAMETER_2};",
 			"    this.${4:METHOD_1} = function() {",
 			"",
 			"    }",
@@ -263,8 +263,8 @@
 		"body": [
 			"class ${1:CLASS_NAME} {",
 			"    constructor(${7:PARAMETER_1}, ${8:PARAMETER_2}) {",
-			"        this.${3:NAME_1} = ${7:PARAMETER_1};",
-			"        this.${4:NAME_2} = ${8:PARAMETER_2};",
+			"        this.${3:VARIABLE_NAME_1} = ${7:PARAMETER_1};",
+			"        this.${4:VARIABLE_NAME_2} = ${8:PARAMETER_2};",
 			"    }",
 			"",
 			"    ${5:METHOD_NAME_1}() {",

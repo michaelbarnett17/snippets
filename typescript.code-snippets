@@ -1,0 +1,101 @@
+{
+	// Variables
+	"TS - let any": {
+		"scope": "typescript",
+		"prefix": "leta",
+		"body": [
+			"let ${1:VARIABLE_NAME}: any$2;",
+		],
+		"description": "declare any"
+	},
+	
+	"TS - let boolean": {
+		"scope": "typescript",
+		"prefix": "letb",
+		"body": [
+			"let ${1:VARIABLE_NAME}: boolean$2;",
+		],
+		"description": "declare boolean"
+	},
+	
+	"TS - let enum": {
+		"scope": "typescript",
+		"prefix": "lete",
+		"body": [
+			"enum ${1:VARIABLE_NAME} { ${2:ENUM_NAME_1} = 0, ${3:ENUM_NAME_2} = 1, ${4:ENUM_NAME_2} = 2};",
+		],
+		"description": "declare string"
+	},		
+
+	"TS - let number": {
+		"scope": "typescript",
+		"prefix": "letn",
+		"body": [
+			"let ${1:VARIABLE_NAME}: number$2;",
+		],
+		"description": "declare number"
+	},
+
+	"TS - let string": {
+		"scope": "typescript",
+		"prefix": "lets",
+		"body": [
+			"let ${1:VARIABLE_NAME}: string$2;",
+		],
+		"description": "declare string"
+	},
+
+	// OOP
+	"TS - interface": {
+		"scope": "typescript",
+		"prefix": "inter",
+		"body": [
+			"interface ${1:INTERFACE_NAME} {",
+			"    ${2:VARIABLE_NAME}: ${4:DATATYPE};",
+			"    ${3:VARIABLE_NAME}: ${5:DATATYPE};",
+			"}",
+		],
+		"description": "interface"
+	},
+
+	"TS - class": {
+		"prefix": "class",
+		"body": [
+			"class ${1:CLASS_NAME} {",
+			"    constructor(private _${2:VARIABLE_NAME_1}?: ${3:DATA_TYPE}, private _${4:VARIABLE_NAME_2}?: ${5:DATA_TYPE}) {",
+			"    }",
+			"",
+			"    ${6:METHOD_NAME_1}() {",
+			"",
+			"    }",
+			"",
+			"    ${7:METHOD_NAME_2}() {",
+			"",
+			"    }",
+			"",
+			"    get ${2:VARIABLE_NAME_1}() {",
+			"        return this.${2:VARIABLE_NAME_1}",
+			"    }",
+			"",
+			"    set ${2:VARIABLE_NAME_1}(value) {",
+			"        this.${2:VARIABLE_NAME_1} = value",
+			"    }",
+			"};",
+			"",
+			"const ${10:INSTANCE_NAME} = new ${1:CLASS_NAME}(${11:ARGUMENT_1}, ${12:ARGUMENT_2});"
+		],
+		"description": "Create a Class"
+	},
+
+	"TS - import": {
+		"scope": "typescript",
+		"prefix": "import",
+		"body": [
+			"import ${1:CLASS_NAME} from './${2:FILE_NAME_WITHOUT_EXTENSION}';",
+		],
+		"description": "declare string"
+	},
+
+
+	
+}
