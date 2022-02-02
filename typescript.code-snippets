@@ -1,6 +1,6 @@
 {
 	// Variables
-	"TS - let any": {
+	"let any - TS": {
 		"scope": "typescript",
 		"prefix": "leta",
 		"body": [
@@ -9,7 +9,7 @@
 		"description": "declare any"
 	},
 	
-	"TS - let boolean": {
+	"let boolean - TS": {
 		"scope": "typescript",
 		"prefix": "letb",
 		"body": [
@@ -18,7 +18,7 @@
 		"description": "declare boolean"
 	},
 	
-	"TS - let enum": {
+	"let enum - TS": {
 		"scope": "typescript",
 		"prefix": "lete",
 		"body": [
@@ -27,7 +27,7 @@
 		"description": "declare string"
 	},		
 
-	"TS - let number": {
+	"let number - TS": {
 		"scope": "typescript",
 		"prefix": "letn",
 		"body": [
@@ -36,7 +36,7 @@
 		"description": "declare number"
 	},
 
-	"TS - let string": {
+	"let string - TS": {
 		"scope": "typescript",
 		"prefix": "lets",
 		"body": [
@@ -46,7 +46,7 @@
 	},
 
 	// OOP
-	"TS - interface": {
+	"interface - TS": {
 		"scope": "typescript",
 		"prefix": "inter",
 		"body": [
@@ -58,7 +58,7 @@
 		"description": "interface"
 	},
 
-	"TS - class": {
+	"class - TS": {
 		"prefix": "class",
 		"body": [
 			"class ${1:CLASS_NAME} {",
@@ -88,7 +88,7 @@
 	},
 
 	// Modules
-	"TS - import": {
+	"import - TS": {
 		"scope": "typescript",
 		"prefix": "import",
 		"body": [
@@ -100,7 +100,7 @@
 	// ANGULAR ///////////////////////////////////////////////////////////////////
 
 	// Component
-	"NG - component": {
+	"component - NG": {
 		"scope": "typescript",
 		"prefix": "component",
 		"body": [
