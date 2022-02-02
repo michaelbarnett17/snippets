@@ -1,6 +1,6 @@
 {
 	// LOGGING
-	"Print to console - Custom": {
+	"JS - Print to console": {
 		"scope": "javascript,typescript",
 		"prefix": "cl",
 		"body": [
@@ -10,7 +10,7 @@
 		"description": "Log output to console"
 	},
 	// CONDITIONAL STATEMENTS
-	"Switch Statement - Custom": {
+	"JS - Switch Statement": {
 		"scope": "javascript,typescript",
 		"prefix": "switch",
 		"body": [
@@ -28,16 +28,16 @@
 		],
 		"description": "Switch Statement"
 	},
-	"Ternary Operator - Custom": {
+	"JS - Ternary Operator": {
 		"scope": "javascript,typescript",
 		"prefix": "ter",
 		"body": [
 			"${1:CONDITION} ? ${2:RETURN_IF_TRUE} : ${3:RETURN_IF_FALSE}",
 		],
-		"description": "Ternary Operator - Custom"
+		"description": "Ternary Operator"
 	},
 	// FUNCTIONS
-	"Function Declaration - Custom": {
+	"JS - Function Declaration": {
 		"scope": "javascript,typescript",
 		"prefix": "fu",
 		"body": [
@@ -47,7 +47,7 @@
 		],
 		"description": "create function declaration"
 	},
-	"Function Expression - Custom": {
+	"JS - Function Expression": {
 		"scope": "javascript,typescript",
 		"prefix": "fun",
 		"body": [
@@ -57,7 +57,7 @@
 		],
 		"description": "create function expression"
 	},
-	"Arrow Function Short - Custom": {
+	"JS - Arrow Function Short": {
 		"scope": "javascript,typescript",
 		"prefix": "ar",
 		"body": [
@@ -65,7 +65,7 @@
 		],
 		"description": "create arrow function one paramater, one line in body"
 	},
-	"Arrow Function Long - Custom": {
+	"JS - Arrow Function Long": {
 		"scope": "javascript,typescript",
 		"prefix": "arr",
 		"body": [
@@ -76,7 +76,7 @@
 		"description": "create arrow function multiple parmaters and multiple lines in body"
 	},
 	// LOOPS
-	"For Loop - Custom": {
+	"JS - For Loop": {
 		"scope": "javascript,typescript",
 		"prefix": "for",
 		"body": [
@@ -86,7 +86,7 @@
 		],
 		"description": "create for loop"
 	},
-	"For Map - Custom": {
+	"JS - For Map": {
 		"scope": "javascript,typescript",
 		"prefix": "formap",
 		"body": [
@@ -97,7 +97,7 @@
 		"description": "create loop for map"
 	},
 	// EVENT LISTENER, HANDLER, DELEGATE
-	"Event Listener - Custom": {
+	"JS - Event Listener": {
 		"scope": "javascript,typescript",
 		"prefix": "el",
 		"body": [
@@ -107,7 +107,7 @@
 		],
 		"description": "create event listener"
 	},
-	"Event Handler - Custom": {
+	"JS - Event Handler": {
 		"scope": "javascript,typescript",
 		"prefix": "eh",
 		"body": [
@@ -119,7 +119,7 @@
 		],
 		"description": "create event handler"
 	},
-	"Delegate an Event - Custom": {
+	"JS - Delegate an Event": {
 		"scope": "javascript,typescript",
 		"prefix": "delegate",
 		"body": [
@@ -133,7 +133,7 @@
 		"description": "delegate an event"
 	},
 	// DOM MANIPULATION
-	"Query Selector  - Custom": {
+	"JS - Query Selector": {
 		"scope": "javascript,typescript",
 		"prefix": "qs",
 		"body": [
@@ -141,7 +141,7 @@
 		],
 		"description": "create query selector"
 	},
-	"Query Selector All  - Custom": {
+	"JS - Query Selector All": {
 		"scope": "javascript,typescript",
 		"prefix": "qsa",
 		"body": [
@@ -149,7 +149,7 @@
 		],
 		"description": "create query selector all"
 	},
-	"Get Elements By Tag Name  - Custom": {
+	"JS - Get Elements By Tag Name": {
 		"scope": "javascript,typescript",
 		"prefix": "tn",
 		"body": [
@@ -158,7 +158,7 @@
 		],
 		"description": "create get elements by tag name"
 	},
-	"Get Elements By Class Name  - Custom": {
+	"JS - Get Elements By Class Name": {
 		"scope": "javascript,typescript",
 		"prefix": "cn",
 		"body": [
@@ -167,7 +167,7 @@
 		],
 		"description": "create get elements by class name"
 	},
-	"Insert Adjacent Element  - Custom": {
+	"JS - Insert Adjacent Element": {
 		"scope": "javascript,typescript",
 		"prefix": "ins",
 		"body": [
@@ -176,7 +176,7 @@
 		],
 		"description": "insert adjacent element"
 	},
-	"Delete Element - Custom": {
+	"JS - Delete Element": {
 		"scope": "javascript,typescript",
 		"prefix": "del",
 		"body": [
@@ -188,7 +188,7 @@
 		"description": "delete an element"
 	},
 	// OBJECT
-	"Object Literal - Custom": {
+	"JS - Object Literal": {
 		"scope": "javascript,typescript",
 		"prefix": "object",
 		"body": [
@@ -206,7 +206,7 @@
 		"description": "create object literal"
 	},
 	// MAP, FILTER, REDUCE
-	"Map Array - Custom": {
+	"JS - Map Array": {
 		"scope": "javascript,typescript",
 		"prefix": "map",
 		"body": [
@@ -217,7 +217,7 @@
 		],
 		"description": "use map method on an array"
 	},
-	"Filter Array - Custom": {
+	"JS - Filter Array": {
 		"scope": "javascript,typescript",
 		"prefix": "filter",
 		"body": [
@@ -228,7 +228,7 @@
 		],
 		"description": "use filter method on an array"
 	},
-	"Reduce Array - Custom": {
+	"JS - Reduce Array": {
 		"scope": "javascript,typescript",
 		"prefix": "reduce",
 		"body": [
@@ -239,7 +239,8 @@
 		"description": "use reduce method on an array"
 	},
 	// OOP
-	"Constructor Function - Custom": {
+	"JS - Constructor Function": {
+		"scope": "javascript,typescript",
 		"prefix": "constructor",
 		"body": [
 			"const ${1:NAME_OF_CONSTRUCTOR_FUNCTION} = function (${6:PARAMETER_1}, ${7:PARAMETER_2}) {",
@@ -258,7 +259,8 @@
 		],
 		"description": "construction function (creates a class) with instance"
 	},
-	"Class - Custom": {
+	"JS - Class": {
+		"scope": "javascript,typescript",
 		"prefix": "class",
 		"body": [
 			"class ${1:CLASS_NAME} {",
@@ -281,7 +283,8 @@
 		"description": "Create a Class"
 	},
 	// ASYNCHRONOUS JAVASCRIPT
-	"XMLHttpRequest - Custom": {
+	"JS - XMLHttpRequest": {
+		"scope": "javascript,typescript",
 		"prefix": "xml",
 		"body": [
 			"const ${1:URL_NAME} = '${3:API_ENDPOINT}';",
@@ -297,7 +300,8 @@
 		],
 		"description": "Create XMLHttpRequest"
 	},
-	"Fetch - Custom": {
+	"JS - Fetch": {
+		"scope": "javascript,typescript",
 		"prefix": "fetch",
 		"body": [
 			"const ${1:URL_NAME} = '${2:API_ENDPOINT}';",
@@ -315,7 +319,8 @@
 		],
 		"description": "Create fetch"
 	},
-	"Asynchronous Function - Custom": {
+	"JS - Asynchronous Function": {
+		"scope": "javascript,typescript",
 		"prefix": "asy",
 		"body": [
 			"",
@@ -334,7 +339,7 @@
 		"description": "Asynchronous Function"
 	},
 	// RANDOM
-	"Random Integer - Custom": {
+	"JS - Random Integer": {
 		"scope": "javascript,typescript",
 		"prefix": "rand",
 		"body": [
@@ -342,6 +347,6 @@
 			"    return Math.floor(Math.random() * (max - min + 1) + min)",
 			"}",
 		],
-		"description": "Random Integer - Custom"
+		"description": "Random Integer"
 	},
 }
